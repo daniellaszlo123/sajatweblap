@@ -1,0 +1,170 @@
+main, head, article, footer, aside, nav{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+body{
+    /* background-image: url(img/hatter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background: rgb(61, 57, 52);
+}
+
+main{
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+    " n n n "
+    " a a as"
+    " f f f ";
+    background: rgb(199, 189, 189);
+}
+
+head{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+    padding: 0;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    text-align: center;
+    list-style-type: none;
+    background: rgb(97, 96, 94);
+}
+
+nav li:hover{
+    background: rgb(59, 59, 59);
+    cursor: pointer;
+    color: white;
+}
+
+
+nav li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+article{
+    grid-area: a;
+    padding: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+article h2{
+    margin-top: 10px;
+}
+
+article img{
+    width: 200px;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+article h4{
+    margin-bottom: 5px;
+}
+
+article p{
+    margin-top: 5px;
+}
+
+article li{
+    list-style-type: square;
+}
+
+.box{
+    padding: 5px;
+    border: 2px solid black;
+    text-align: center;
+    width: 300px;
+    background: rgb(228, 207, 180);
+    margin: 5px;
+}
+
+.proj .projkep{
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.proj p{
+    display: block;
+}
+
+.proj{
+    padding: 5px;
+    width: 200px;
+    margin: auto;
+}
+
+hr{
+    background: black;
+    color: black;
+    height: 2px;
+    border-width: 0;
+    width: 70%;
+}
+
+.box .proj p{
+    font-size: 17px;
+}
+
+.letoltes{
+    width: 20px;
+    margin-right: 40px;
+}
+
+button a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+    text-align: center;
+    background: rgb(97, 96, 94);
+}
+
+footer p{
+    margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+    main{
+        grid-template-areas:
+        " n "
+        " a "
+        " as "
+        " f ";
+    }
+
+    nav ul{
+        grid-template-columns: 1fr;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
