@@ -1,4 +1,4 @@
-main, head, article, footer, aside, nav{
+main, header, article, footer, aside, nav{
     border: 1px solid black;
     padding: 5px;
     margin: 5px;
@@ -16,14 +16,18 @@ main{
     margin: auto;
     display: grid;
     grid-template-areas:
+    " h h h "
     " n n n "
     " a a as"
     " f f f ";
     background: rgb(199, 189, 189);
 }
 
-head{
+header{
     grid-area: h;
+    padding: 0;
+    margin: 0;
+    border: none;
 }
 
 nav{
@@ -94,7 +98,6 @@ article li{
     padding: 5px;
     border: 2px solid black;
     text-align: center;
-    width: 300px;
     background: rgb(228, 207, 180);
     margin: 5px;
 }
@@ -154,12 +157,15 @@ footer p{
 @media screen and (max-width: 900px) {
     main{
         grid-template-areas:
+        " h "
         " n "
         " a "
         " as "
         " f ";
     }
+}
 
+@media screen and (max-width: 600px) {
     nav ul{
         grid-template-columns: 1fr;
     }
